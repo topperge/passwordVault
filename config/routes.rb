@@ -1,4 +1,12 @@
 PasswordVault::Application.routes.draw do
+  get "users/index"
+
+  get "users/show"
+
+  devise_for :users
+
+  get "home/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ PasswordVault::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
